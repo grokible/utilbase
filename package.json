@@ -1,0 +1,11 @@
+{
+  "name": "utilbase",
+  "version": "1.0.0",
+  "description": "Base Utilities for OOP and Promises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roger Bush <roger@grokible.com>",
+  "license": "ISC"
+}
