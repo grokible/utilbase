@@ -1,4 +1,3 @@
-
 var Prop = {};
 module.exports = Prop;
 
