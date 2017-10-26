@@ -10,4 +10,4 @@ UtilBase.Prop = require ('./prop');
 UtilBase.RestCaller = require ('./restCaller');
 UtilBase.RestUtil = require ('./restUtil');
 
-exports = UtilBase;
+module.exports = UtilBase;

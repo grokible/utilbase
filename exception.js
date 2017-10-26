@@ -1,5 +1,5 @@
 
-var ctor = require ('../lib/oop').ctor,
+var ctor = require ('./oop').ctor,
     inherits = require ('inherits');
 
 var _copyChain = function (obj) {
