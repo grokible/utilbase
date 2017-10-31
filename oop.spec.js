@@ -2,8 +2,8 @@
 
 var Oop = require ('./oop.js');
 var ctor = Oop.ctor;
-// var inherits = Oop.inherits;
-var inherits = require ('inherits');
+var inherits = require ('inherits-ex/lib/inherits');
+//var inherits = require ('inherits');
 
 var expect = require ('chai').expect;
 
@@ -104,6 +104,55 @@ describe ("Oop", function () {
 
     });
 
+    describe ("Multiple inheritance)", function () {
+        it ("Allows multiple inheritance", function () {
+            class A {
+                constructor () {
+                    return this;
+                }
+            }
 
+            class B extends A {
+                constructor () {
+                    super ();
+                    return this;
+                }
+            }
+
+            class C extends B {
+                constructor () {
+                    super ();
+                    return this;
+                }
+            }
+
+            var c = new C ();
+        });
+    });
+
+
+
+/*
+    // This infinitely recurses
+    describe ("Multiple inheritance", function () {
+        it ("Allows multiple inheritance", function () {
+            var A = function A () {
+            }
+            var B = function B () {
+                this.constructor._super ();
+            }
+            var C = function C () {
+                this.constructor._super ();
+            }
+
+            inherits (C, B);
+            inherits (B, A);
+            inherits (A, Object);
+
+            var c = C ();
+            
+        });
+    });
+*/
 
 });
